@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>My Shopping List</h2>
+    <button onclick="start()">Run Shopping List</button>
+
+    <script>
+        function start() {
+            let shoppingList = ["Bread", "Milk", "Sugar", "Rice"];
+
+            console.log("1. Full list:", shoppingList);
+
+            console.log("2. First item:", shoppingList[0]);
+
+            console.log("3. Last item:", shoppingList[shoppingList.length - 1]);
+
+            shoppingList.push("Cooking Oil");
+            console.log("4. After adding Cooking Oil:", shoppingList);
+
+            shoppingList.shift();
+            console.log("5. After removing first item:", shoppingList);
+
+            let index = shoppingList.indexOf("Sugar");
+            if (index !== -1) {
+                shoppingList[index] = "Tea Leaves";
+            }
+            console.log("6. After changing Sugar:", shoppingList);
+
+            console.log("7. Total items:", shoppingList.length);
+
+            alert("Check the Console (F12) for results!");
+        }
+    </script>
+</body>
+</html>
